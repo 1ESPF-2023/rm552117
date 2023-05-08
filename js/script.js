@@ -20,28 +20,49 @@
 //Math.Random
 //math.floon
 
-function mudacor(){
-    let r=0;
-    let g=0;
-    let b=0;
+// function mudacor(){
+//     let r=0;
+//     let g=0;
+//     let b=0;
 
-    r= Math.ceil(Math.random() *255);
-    g= Math.ceil(Math.random() *255);
-    b= Math.ceil(Math.random() *255);
+//     r= Math.ceil(Math.random() *255);
+//     g= Math.ceil(Math.random() *255);
+//     b= Math.ceil(Math.random() *255);
     
-    const cabecalho = document.querySelector('.cabecalho');
-    cabecalho.style = `../img/banner-1440x300-1.jpg`
-    const banner1 = document.querySelector('.banner1');
-    banner1.style = `(./img/banner-lateral-1.png)`;
-    const banner2 = document.querySelector('.banner2');
-    banner2.style.backgroundColor = `rgb(${r},${g},${b})`;
-    const rodape = document.querySelector('.rodape');
-    rodape.style.backgroundColor = `rgb(${r},${g},${b})`;
-    const conteudo = document.querySelector('.conteudo');
-    conteudo.style.backgroundColor = `rgb(${r},${g},${b})`;
+//     const cabecalho = document.querySelector('.cabecalho');
+//     conteudo.style.backgroundColor = `rgb(${r},${g},${b})`;
+//     const banner1 = document.querySelector('.banner1');
+//     banner1.style = `(./img/banner-lateral-1.png)`;
+//     const banner2 = document.querySelector('.banner2');
+//     banner2.style.backgroundColor = `rgb(${r},${g},${b})`;
+//     const rodape = document.querySelector('.rodape');
+//     rodape.style.backgroundColor = `rgb(${r},${g},${b})`;
+//     const conteudo = document.querySelector('.conteudo');
+//     conteudo.style.backgroundColor = `rgb(${r},${g},${b})`;
     
-    tmp = setTimeout(mudacor, 1000, )
+//     tmp = setTimeout(mudacor, 1000, )
 
 
+// }
+// mudacor();
+
+function mudabanner() {
+    const imgElement1 = document.querySelector('.banner-1 img');
+    let nr = Math.ceil(Math.random()*3);
+    imgElement1.src = `./img/banner-lateral-${nr}.png`;
+    setTimeout(mudabanner, 1000);
+//  console.log(imgElement1);
 }
-mudacor();
+mudabanner()
+
+function ligadesliga(){
+    const imgElement2 = document.querySelector('.lampada img')
+    let on = <img src="./img/pic_bulbon.gif" alt="" />
+}
+
+const botao = document.querySelector('button');
+botao.addEventListener("click", function(){
+    if(this.textContent == "LIGAR"){
+        const imgElement = document.querySelector("img[alt'lampada")
+    }
+})

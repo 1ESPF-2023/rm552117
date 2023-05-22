@@ -4,6 +4,7 @@ let usuario = "";
 let senha = "";
 
 const botaoSubmit = document.querySelector("#btnSubmit");
+const msgStatus = document.querySelector("#msg");
 
 botaoSubmit.addEventListener("click",()=>{
     
@@ -25,10 +26,14 @@ botaoSubmit.addEventListener("click",()=>{
         labelUser.setAttribute("style","color:#00ff00;");
         labelPass.setAttribute("style","color:#00ff00;");
         if(usuarioLogado.nomeUsuarioLogado == "tutu" && usuarioLogado.senhaUsuarioLogado == "123456"){
+            msgStatus.setAttribute("style","color:#00ff00;");
+            msgStatus.innerHTML = "<span><strong>Login efetuado com sucesso</strong></span>"
             alert("Válido")
         }
         else{
             alert("Não válido")
+            msgStatus.setAttribute("style","color:#ff0000;");
+            msgStatus.innerHTML = "<span><strong>Login falho</strong></span>"
         }
     }
     else{

@@ -1,7 +1,24 @@
 "use strict";
 
-let usuario = "";
-let senha = "";
+let lista_de_usuarios=[
+    {
+    nomeCompleto : "José",
+    nomeUsuario : "José",
+    senhaUsuario : "123456",
+    },
+    {
+    nomeCompleto : "Dane",
+    nomeUsuario : "Dane",
+    senhaUsuario : "123456",
+    },
+    {
+    nomeCompleto : "Amem",
+    nomeUsuario : "Amem",
+    senhaUsuario : "123456",
+    },
+]
+
+let usuarioValidado
 
 const botaoSubmit = document.querySelector("#btnSubmit");
 const msgStatus = document.querySelector("#msg");
